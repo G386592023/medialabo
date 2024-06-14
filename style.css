@@ -1,3 +1,45 @@
+body{
+    background-color: #E6E3DF;
+
+}
+
+p{
+    color:#615040;
+    font-size: 55%;
+    padding: 0 10px 0 10px;
+}
+
+h1 {
+	color: #615040;
+    padding: 0 0 0 60px;
+}
+
+h2 {
+	color: #615040;
+    padding: 0 0 0 60px;
+}
+
+h3 {
+	color: #615040;
+    padding: 0 0 0 85px;
+}
+
+
+div.zentai{
+    margin: 0 60px 60px 60px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-auto-rows: 250px 250px;
+	grid-gap: 60px;
+
+    width: 870px;
+}	
+
+div.box {
+	background: white;
+    border: 4px solid #615040;
+}
+
 a:link {
     color: #E9DB63;
 }
@@ -6,3 +48,6 @@ a:visited {
     color: #D8A346;
 }
 
+img{
+	float: left;
+}
