@@ -6,7 +6,7 @@ body{
 p{
     color:#615040;
     font-size: 55%;
-    padding: 0 10px 0 10px;
+    padding: 20px 10px 0 10px;
 }
 
 h1 {
@@ -21,7 +21,10 @@ h2 {
 
 h3 {
 	color: #615040;
+    margin: 10px 0 0 0;
     padding: 0 0 0 85px;
+    font-family: system-ui;
+    font-weight: 1000;
 }
 
 
@@ -50,4 +53,6 @@ a:visited {
 
 img{
 	float: left;
+    width: 70px;
+    height: 70px;
 }
