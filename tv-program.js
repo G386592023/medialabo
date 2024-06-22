@@ -81,3 +81,11 @@ let data = {
 
 /////////////////// 課題3-2 はここから書き始めよう
 
+for (let n of data.list.g1){
+  console.log(n.title);
+  console.log(n.service.name);
+  console.log(n.start_time);
+  console.log(n.end_time);
+  console.log(n.act);
+  console.log(n.subtitle);
+}
