@@ -82,6 +82,7 @@ let data = {
 /////////////////// 課題3-2 はここから書き始めよう
 
 for (let n of data.list.g1){
+
   console.log(n.title);
   console.log(n.service.name);
   console.log(n.start_time);
@@ -89,3 +90,17 @@ for (let n of data.list.g1){
   console.log(n.act);
   console.log(n.subtitle);
 }
+
+
+
+
+
+let div = document.querySelector("div#result");
+
+
+
+for (let n of data.list.g1){    
+  let title = document.createElement("h2");
+  title.textContent = n.title;
+  div.insertAdjacentElement("beforeend",title);
+} 

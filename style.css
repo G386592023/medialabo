@@ -5,13 +5,13 @@ body{
 p{
     color:#615040;
     font-size: 55%;
-    padding: 20px 10px 0 10px;
+    padding: 20px 15px 0 15px;
 }
 
 p.moji{
     color:#615040;
     font-size: 55%;
-    padding: 0 10px 0 10px;
+    padding: 20px 10px 0 0;
 }
 
 h1 {
@@ -46,16 +46,26 @@ h2.kuro {
 div.zentai{
     margin: 0 60px 60px 60px;
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-auto-rows: 250px;
+	grid-template-columns: 1fr;
+	grid-auto-rows: 250px 250px 250px;
 	grid-gap: 60px;
 
     width: 870px;
 }
 
+div.dannraku{
+    margin: 0 0px 0px 45px;
+
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-auto-rows: 100px;
+	grid-gap: 60px;
+
+    width: 780px;
+}
+
 div.temae {
 	background: white;
-    border: 4px solid #615040;
 }
 
 div.zentai2{
