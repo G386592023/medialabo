@@ -92,15 +92,28 @@ for (let n of data.list.g1){
 }
 
 
+let img = ["みんなうた.png", "パラスポーツ×アニメ「アニ×パラ」.png", 'c'];
+
+
+let img1 = document.createElement("img");
+img1.src = "みんなうた.png";
+let img2 = document.createElement("img");
+img2.src = "パラスポーツ×アニメ「アニ×パラ」.png";
+
 
 
 
 let div = document.querySelector("div#result");
 
 
+for (let n of data.list.g1){
 
-for (let n of data.list.g1){    
+  let zentai = document.createElement("div");
+  zentai.classList.add("zentai");
+  div.insertAdjacentElement("beforeend",zentai);
+
   let title = document.createElement("h2");
   title.textContent = n.title;
-  div.insertAdjacentElement("beforeend",title);
-} 
+  zentai.insertAdjacentElement("beforeend",title);
+}
+
