@@ -92,28 +92,84 @@ for (let n of data.list.g1){
 }
 
 
-let img = ["みんなうた.png", "パラスポーツ×アニメ「アニ×パラ」.png", 'c'];
+let img = ["みんなうた.png", "パラスポーツ×アニメ「アニ×パラ」.png"];
 
-
-let img1 = document.createElement("img");
-img1.src = "みんなうた.png";
-let img2 = document.createElement("img");
-img2.src = "パラスポーツ×アニメ「アニ×パラ」.png";
 
 
 
 
 let div = document.querySelector("div#result");
 
+let zentai = document.createElement("div");
+zentai.classList.add("zentai");
+div.insertAdjacentElement("beforeend",zentai);
+
+
 
 for (let n of data.list.g1){
 
-  let zentai = document.createElement("div");
-  zentai.classList.add("zentai");
-  div.insertAdjacentElement("beforeend",zentai);
+  let box = document.createElement("div");
+  box.classList.add("box");
+  zentai.insertAdjacentElement("beforeend",box);
+
+  let src = document.createElement("img");
+  src.src = img[n];
+  box.insertAdjacentElement("beforeend",src);
+
+  let br = document.createElement("br");
+  src.insertAdjacentElement("afterend",br);
 
   let title = document.createElement("h2");
   title.textContent = n.title;
-  zentai.insertAdjacentElement("beforeend",title);
+  br.insertAdjacentElement("afterend",title);
+
+  let service = document.createElement("p");
+  service.classList.add("kyoku");
+  service.textContent = n.service.name;
+  title.insertAdjacentElement("afterend",service);
+
+  let time = document.createElement("p");
+  let time1 = n.start_time.slice( 0 ,4 );
+  let time2 = n.start_time.slice( 5 ,7 );
+  let time3 = n.start_time.slice( 8 ,10 );
+  let time4 = n.start_time.slice( 11 ,16 );
+  let time5 = n.end_time.slice( 11 ,16 );
+  time.textContent = time1 + "年" + time2 + "月" + time3 + "日　" + time4 + "〜" + time5 + "（5分）";
+  service.insertAdjacentElement("afterend",time);
+
+  let zentai2 = document.createElement("div");
+  zentai2.classList.add("zentai2");
+  time.insertAdjacentElement("afterend",zentai2);
+
+
+  let box2 = document.createElement("div");
+  box2.classList.add("box2");
+  zentai2.insertAdjacentElement("beforeend",box2);
+
+  let act = document.createElement("h3");
+  act.textContent = "出演者ほか";
+  box2.insertAdjacentElement("beforeend",act);
+
+  let act2 = document.createElement("p");
+  act2.textContent = n.act;
+  if(n.act === ""){
+    act2.textContent = "記載なし";
+  }
+  act.insertAdjacentElement("afterend",act2);
+
+  let box22 = document.createElement("div");
+  box22.classList.add("box2");
+  box2.insertAdjacentElement("afterend",box22);
+
+  let subtitle = document.createElement("h3");
+  subtitle.textContent = "詳細";
+  box22.insertAdjacentElement("beforeend",subtitle);
+
+  let subtitle2 = document.createElement("p");
+  subtitle2.textContent = n.subtitle;
+  if(n.subtitle === ""){
+    subtitle2.textContent = "記載なし";
+  }
+  subtitle.insertAdjacentElement("afterend",subtitle2);
 }
 
