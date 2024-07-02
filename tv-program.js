@@ -37,7 +37,10 @@ let data = {
           "0409",
           "0700",
           "0504"
-        ]
+        ],
+
+        "img":"みんなうた.png"
+
       },
       {
         "id": "2022030427069",
@@ -73,7 +76,10 @@ let data = {
         "act": "【声】松本まりか，【出演】Ａｗｅｓｏｍｅ　Ｃｉｔｙ　Ｃｌｕｂ，【監督】西村一彦，【脚本】加納新太，【原案】江口寿史",
         "genres": [
           "0700"
-        ]
+        ],
+
+        "img":"パラスポーツ×アニメ「アニ×パラ」.png"
+
       }
     ]
   }
@@ -112,9 +118,11 @@ for (let n of data.list.g1){
   box.classList.add("box");
   zentai.insertAdjacentElement("beforeend",box);
 
+
   let src = document.createElement("img");
-  src.src = img[n];
+  src.src = n.img;
   box.insertAdjacentElement("beforeend",src);
+
 
   let br = document.createElement("br");
   src.insertAdjacentElement("afterend",br);
