@@ -17,7 +17,7 @@ function hantei() {
   let i = document.querySelector('input[name="kazu"]');
   let kazu = i.value;
 
-  kazu = kazu - 0;
+  let yoso = Number(kazu);
 
   kaisu = kaisu+1; 
 
@@ -25,7 +25,7 @@ function hantei() {
   kaisu2.textContent = kaisu;
 
   let answer = document.querySelector("span#answer");
-  answer.textContent = kazu;
+  answer.textContent = yoso;
 
   let p = document.querySelector("p#result"); 
   
@@ -33,16 +33,16 @@ function hantei() {
     p.textContent = "答えは " + kotae + " でした．すでにゲームは終わっています";
   } 
 
-  if(kotae === kazu && a === 0){
+  if(kotae === yoso && a === 0){
     p.textContent = "正解です．おめでとう!";
     a = 1;
   } 
 
-  if(kotae < kazu && kaisu < 4 && a === 0){
+  if(kotae < yoso && kaisu < 4 && a === 0){
     p.textContent = "まちがい．答えはもっと小さいですよ";
   }
 
-  if(kotae > kazu && kaisu < 4 && a === 0){
+  if(kotae > yoso && kaisu < 4 && a === 0){
     p.textContent = "まちがい．答えはもっと大きいですよ";
   }
 

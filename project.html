@@ -9,15 +9,36 @@
     </head>
     <body>
         <h1>NHK の番組表</h1><br>
-        <form action="" method="get" class="form-example">
-            <div class="form-example">
-              <label for="name">番組を検索 </label>
-              <input type="text" name="name" id="name" required />
-              <input type="submit" value="検索" />
-              <p>2件表示 / 2件</p><br>
+        <div class="form-example">
+            <label for="tyan">チャンネル</label>
+            <select name="tyan" id="tyan">
+                <option value="">チャンネルを選択</option>
+                <option value="tg1">NHK総合1</option>
+                <option value="te1">Eテレ1</option>
+            </select><br><br>
+            
+            <label for="zyanru">ジャンル　</label>
+            <select name="zyanru" id="zyanru">
+                <option value="">ジャンルを選択</option>
+                <option value="z0000">ニュース・報道</option>
+                <option value="z0100">スポーツ</option>
+                <option value="z0205">情報・ワイドショー</option>
+                <option value="z0300">ドラマ</option>
+                <option value="z0409">音楽</option>
+                <option value="z0502">バラエティ</option>
+                <option value="z0600">映画</option>
+                <option value="z0700">アニメ</option>
+                <option value="z0800">ドキュメンタリー・教養</option>
+                <option value="z0903">劇場・公演</option>
+                <option value="z1000">趣味・教育</option>
+                <option value="z1100">福祉</option>
+            </select><br><br>
 
-            </div>
-        </form>
+            <button id="btn">検索</button><br><br>
+
+            <p>2件表示 / 2件</p>
+        </div>
+        
 
         <!-- <div class="zentai">
             <div class="box">
