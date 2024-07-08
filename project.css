@@ -31,6 +31,28 @@ label{
     font-weight: 700;
 }
 
+select{
+    border: 1px solid #615040;
+    border-radius: 4px;
+	color: #615040;
+    background-color: #f5f3f1;
+}
+
+button{
+    border: 1px solid #615040;
+    border-radius: 4px;
+	color: #615040;
+    background-color: #f5f3f1;
+}
+button:hover {
+    background-color: #c7b3a0;
+}
+button:active {
+    box-shadow:
+      inset -2px -2px 3px #f5f3f1,
+      inset 2px 2px 3px #615040;
+}
+
 div.form-example {
     padding: 30px 0 30px 60px;
     background: #E6E3DF;
