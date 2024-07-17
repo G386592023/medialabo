@@ -140,9 +140,18 @@ for (let n of data.list.g1){
   let time1 = n.start_time.slice( 0 ,4 );
   let time2 = n.start_time.slice( 5 ,7 );
   let time3 = n.start_time.slice( 8 ,10 );
-  let time4 = n.start_time.slice( 11 ,16 );
-  let time5 = n.end_time.slice( 11 ,16 );
-  time.textContent = time1 + "年" + time2 + "月" + time3 + "日　" + time4 + "〜" + time5 + "（5分）";
+  let time4 = n.start_time.slice( 11 ,13 );
+  let time5 = n.start_time.slice( 14 ,16 );
+  let time6 = n.end_time.slice( 11 ,13 );
+  let time7 = n.end_time.slice( 14 ,16 );
+
+  let minute4 = Number(time4);
+  let minute5 = Number(time5);
+  let minute6 = Number(time6);
+  let minute7 = Number(time7);
+  let minute = (minute6*60 + minute7) - (minute4*60 + minute5);
+
+  time.textContent = time1 + "年" + time2 + "月" + time3 + "日　" + time4 + ":" + time5 + "〜" + time6 + ":" + time7 + "（" + minute + "分）";
   service.insertAdjacentElement("afterend",time);
 
   let zentai2 = document.createElement("div");
