@@ -1,11 +1,23 @@
-let b = document.querySelector('#sendRequest');
 b.addEventListener('click', sendRequest);
 
 
 // 通信を開始する処理
 function sendRequest() {
+
+	let s = document.querySelector("select#service");
+	let idx = s.selectedIndex;
+	let os = s.querySelectorAll('option');  
+	let o = os.item(idx); 
+	let service = o.getAttribute('value');
+	
+	let s2 = document.querySelector("select#genre");
+	let idx2 = s2.selectedIndex;
+	let os2 = s2.querySelectorAll('option');  
+	let o2 = os2.item(idx2); 
+	let genre = o2.getAttribute('value');
+  
 	// URL を設定
-	let url = 'https://www.nishita-lab.org/web-contents/jsons/test.json';
+	let url = "https://www.nishita-lab.org/web-contents/jsons/nhk/" + service + "-" + genre + "-j.json";
 
 	// 通信開始
 	axios.get(url)
@@ -26,6 +38,8 @@ function showResult(resp) {
 
 	// data をコンソールに出力
 	console.log(data);
+
+	print(data);
 
 	// data.x を出力
 	console.log(data.x);

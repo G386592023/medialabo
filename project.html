@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>NHK の番組表</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
         <link rel="stylesheet" href="project.css">
 
         <script src="tv-program.js" defer></script>
@@ -10,33 +11,33 @@
     <body>
         <h1>NHK の番組表</h1><br>
         <div class="form-example">
-            <label for="tyan">チャンネル</label>
-            <select name="tyan" id="tyan">
+            <label for="service">チャンネル</label>
+            <select name="service" id="service">
                 <option value="">チャンネルを選択</option>
-                <option value="tg1">NHK総合1</option>
-                <option value="te1">Eテレ1</option>
+                <option value="g1">NHK総合1</option>
+                <option value="e1">Eテレ1</option>
             </select><br><br>
             
-            <label for="zyanru">ジャンル　</label>
-            <select name="zyanru" id="zyanru">
+            <label for="genre">ジャンル　</label>
+            <select name="genre" id="genre">
                 <option value="">ジャンルを選択</option>
-                <option value="z0000">ニュース・報道</option>
-                <option value="z0100">スポーツ</option>
-                <option value="z0205">情報・ワイドショー</option>
-                <option value="z0300">ドラマ</option>
-                <option value="z0409">音楽</option>
-                <option value="z0502">バラエティ</option>
-                <option value="z0600">映画</option>
-                <option value="z0700">アニメ</option>
-                <option value="z0800">ドキュメンタリー・教養</option>
-                <option value="z0903">劇場・公演</option>
-                <option value="z1000">趣味・教育</option>
-                <option value="z1100">福祉</option>
+                <option value="0000">ニュース・報道</option>
+                <option value="0100">スポーツ</option>
+                <option value="0205">情報・ワイドショー</option>
+                <option value="0300">ドラマ</option>
+                <option value="0409">音楽</option>
+                <option value="0502">バラエティ</option>
+                <option value="0600">映画</option>
+                <option value="0700">アニメ</option>
+                <option value="0800">ドキュメンタリー・教養</option>
+                <option value="0903">劇場・公演</option>
+                <option value="1000">趣味・教育</option>
+                <option value="1100">福祉</option>
             </select><br><br>
 
             <button id="btn">検索</button><br><br>
 
-            <p>2件表示 / 2件</p>
+            <p>2件表示</p>
         </div>
         
 
