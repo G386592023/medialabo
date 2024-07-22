@@ -14,7 +14,7 @@ let count =0;
 
 function print (data) {
 
-  let img = "みんなうた.png";
+  let img = "NHK.png";
 
   let div = document.querySelector("div#result");
 
@@ -24,7 +24,7 @@ function print (data) {
 
   if(service === "g1"){
     let span = document.querySelector("span");
-    span.textContent = data.list.g1.length;
+    span.textContent = data.list.g1.length + "件表示";
     for (let n=0; n<data.list.g1.length; n=n+1){
     
       let box = document.createElement("div");
@@ -33,6 +33,7 @@ function print (data) {
     
       let src = document.createElement("img");
       src.src = img;
+      changeColor(src);
       box.insertAdjacentElement("beforeend",src);
     
       let br = document.createElement("br");
@@ -104,7 +105,7 @@ function print (data) {
   }else {
 
     let span = document.querySelector("span");
-    span.textContent = data.list.e1.length;
+    span.textContent = data.list.e1.length + "件表示";
     for (let n=0; n<data.list.e1.length; n=n+1){
       let box = document.createElement("div");
       box.classList.add("box");
@@ -112,6 +113,7 @@ function print (data) {
     
       let src = document.createElement("img");
       src.src = img;
+      changeColor(src);
       box.insertAdjacentElement("beforeend",src);
     
       let br = document.createElement("br");
@@ -182,13 +184,27 @@ function print (data) {
   }
 }
 
+function changeColor(src) {
+	// ランダムな RGB の色
+	let r = Math.floor(Math.random() * (256-102) + 102);
+	let g = Math.floor(Math.random() * (256-85) + 85);
+	let b = Math.floor(Math.random() * (256-69) + 69);
+	// 色のプロパティ値を作る
+	let color = 'rgb(' + r + ',' + g + ',' + b + ')';
+
+	src.style.backgroundColor = color;
+}
+
 function print2() {
   let span = document.querySelector("span");
-  span.textContent = "0";
+  span.textContent = "0件表示";
 
   let div = document.querySelector("div#result");
 
   let zero = document.createElement("p");
+  zero.style.margin = "0 0 0 100px";
+  zero.style.fontSize = "80%";
+  zero.style.fontWeight = "700";
   zero.textContent = "条件に一致する番組がありませんでした。";
   div.insertAdjacentElement("beforeend",zero);
 }
