@@ -1,14 +1,3 @@
-/////////////////// 課題3-2 はここから書き始めよう
-
-// for (let n=0; n<data.list.g1.length; n=n+1){
-//   console.log(data.list.g1[n].title);
-//   console.log(data.list.g1[n].service.name);
-//   console.log(data.list.g1[n].start_time);
-//   console.log(data.list.g1[n].end_time);
-//   console.log(data.list.g1[n].act);
-//   console.log(data.list.g1[n].subtitle);
-// }
-
 let service;
 let count =0;
 
@@ -305,7 +294,6 @@ function showResult(resp) {
 	// data をコンソールに出力
 	console.log(data);
   
-
   if(data.list === null){
     print2(); 
   }else{
